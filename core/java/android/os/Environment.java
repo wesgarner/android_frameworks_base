@@ -40,6 +40,9 @@ public class Environment {
     private static final File DATA_DIRECTORY
             = getDirectory("ANDROID_DATA", "/data");
 
+    private static final File = SD_EXT_DIRECTORY
+            = getDirectory("SD_EXT_DIRECTORY", "/sd-ext");
+
     private static final File EXTERNAL_STORAGE_DIRECTORY
             = getDirectory("EXTERNAL_STORAGE", "/sdcard");
 
@@ -82,7 +85,14 @@ public class Environment {
      * 
      * {@sample development/samples/ApiDemos/src/com/example/android/apis/content/ExternalStorage.java
      * monitor_storage}
+     *
+     * Gets the SD EXT directory.
+     * @hide
      */
+    public static File getDataDirectory() {
+        return SD_EXT_DIRECTORY;
+    }
+
     public static File getExternalStorageDirectory() {
         return EXTERNAL_STORAGE_DIRECTORY;
     }
